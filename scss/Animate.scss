@@ -1,0 +1,21 @@
+.header_links-active:before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 15px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #50a6b7;
+}
+
+.header_link:hover:before{
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 15px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #50a6b7;
+}

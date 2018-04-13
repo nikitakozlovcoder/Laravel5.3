@@ -1,0 +1,26 @@
+.products{
+    margin-top: 30px;
+    padding-bottom: 30px;
+}
+.products_item {
+    margin-top: 50px;
+    text-align: center;
+
+}
+.products_item_button{
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    position: relative;
+    color: #54576a;
+}
+.products_item_button:before{
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 15px;
+    right: -18px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #50a6b7;
+}

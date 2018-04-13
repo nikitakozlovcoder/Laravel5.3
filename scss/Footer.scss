@@ -1,0 +1,51 @@
+.footer{
+    background-size: cover;
+    background: #33363c no-repeat center;
+    margin-top: 80px;
+    padding-top: 80px;
+}
+.footer_col{
+    padding: 30px 0;
+    color: white;
+}
+.footer_col_form h1{
+    color: white;
+    text-align: left;
+
+}
+.footer_form>*{
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin-top: 10px;
+    color: white;
+    border: none;
+    outline: none;
+    background: #2c2f34;
+    opacity: 0.7;
+
+
+}
+.footer_col_info_text-accent{
+    color: #54bfd0;
+    font-weight:bold;
+}
+.footer_submit{
+    background: #50a6b7;
+    color: white;
+    opacity: 1;
+    cursor: pointer;
+}
+.footer_submit:hover{
+    background-color: #54bfd0;
+}
+.footer_col_info_text{
+    text-align: left;
+}
+.map{
+    width: 100%;
+    height: 300px;
+    display: block;
+    margin-bottom: 10px;
+    border:0;
+}

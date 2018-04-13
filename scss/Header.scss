@@ -1,0 +1,121 @@
+.logo img{
+    height: 40px;
+}
+.header{
+    min-height: 100vh;
+    background-color: #33363c;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('../img/1920x1080/01.jpg');
+    background-size: cover;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    }
+
+.nav_expand{
+    cursor: pointer;
+    height: 15px;
+}
+.nav_expand path{
+    fill: white;
+}
+a {
+  font-family: Hind, sans-serif;
+  outline: 0;
+  font-weight: bold;
+}
+
+a:focus, a:hover, a:active {
+  outline: 0;
+  text-decoration: none;
+}
+.header_info {
+    justify-self: center;
+}
+
+.header_nav_main{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: #ffffff;
+    z-index: 100;
+    border-bottom: 1px #ccd0d6 solid;
+
+}
+@media screen and (max-width: 799px ){
+    .header_links{
+        position: fixed;
+        top: 71px;
+        width: 100%;
+        overflow: hidden;
+        left: 0;
+        height: 0;
+        background: #FFFFFF;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: height 0.2s ease-in-out;
+        box-shadow: 0 0 1px rgba(0,0,0,0.5);
+}
+}
+
+.header_info-wrap {
+    z-index: 10;
+    margin: auto;
+    max-width: 1100px;
+
+}
+.header_info_title {
+    text-transform: uppercase;
+    font-size: 50px;
+    margin-bottom: 10px;
+    color: #ffffff;
+
+}
+.header_info_text {
+    color: white;
+    font-size: 19px;
+}
+.header_nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 20px;
+    height: 70px;
+
+}
+.header_info_button {
+    padding: 15px;
+    margin-top: 10px;
+    display: inline-block;
+    border: 1px #777a7f solid;
+    color: white !important;
+
+}
+
+.header_link{
+    color: black;
+    font-size: 16px;
+    padding: 10px 20px;
+    text-transform: uppercase;
+}
+header  a:focus, header a:hover, header a:active, .header_links-active {
+    position: relative;
+    color: black;
+
+}
+
+.nav_light{
+    background: #ffffff !important;
+    border-bottom: 1px #ccd0d6 solid;
+}
+.nav_light .header_link{
+    color: black;
+}
+
+.nav_light .nav_expand path{
+    fill: black;
+}

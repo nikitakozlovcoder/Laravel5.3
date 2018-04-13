@@ -1,0 +1,31 @@
+.products-grid{
+    position: relative;
+    margin-top: 100px;
+}
+.product-grid_item{
+    padding: 10px;
+    text-align: center;
+}
+
+.product-grid_item_title{
+    padding-top: 10px;
+    display: inline-block;
+    font-weight: bold;
+    color: #54576a;
+
+
+}
+.product-grid_item_title:hover{
+    text-decoration: underline;
+}
+.product-grid_item_wrap img{
+    max-height: 100%;
+    width: auto;
+    max-width: 100%;
+}
+.product-grid_item_wrap{
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
