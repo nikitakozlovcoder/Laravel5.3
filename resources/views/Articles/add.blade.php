@@ -11,11 +11,16 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <script src='{{asset('js/tinymce/tinymce.min.js')}}'></script>
     <script>
+        var defaultToolbar = "undo redo | styleselect | bold italic | alignleft"
+            + "aligncenter alignright alignjustify | "
+            + "bullist numlist outdent indent | link image";
         tinymce.init({
             selector: '#InputBody',
-            plugins : 'advlist autolink link image lists charmap print',
+            plugins : 'advlist autolink link image lists charmap print textcolor table',
             images_upload_url: '/articles/uploadimage',
-            automatic_uploads: false
+            automatic_uploads: false,
+            toolbar: defaultToolbar+" forecolor backcolor table",
+
         });
     </script>
 </head>
@@ -50,7 +55,7 @@
         </div>
         <div class="form-group">
             <label for="InputShort">Краткое описание</label>
-            <textarea name="short" id="InputShort" cols="" rows="2" class="form-control"></textarea>
+            <textarea name="short" id="InputShort" cols="" rows="2" class="form-control" maxlength="250"></textarea>
         </div>
         <div class="form-group">
             <label for="InputBody">Текст</label>

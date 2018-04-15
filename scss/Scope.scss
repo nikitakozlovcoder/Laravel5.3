@@ -6,4 +6,28 @@
 }
 .scope_text{
   color: #2b2b2b;
+  overflow: auto;
+}
+.scope_text img{
+  padding: 5px;
+}
+.scope_text .table-responsive{
+  display: block;
+  width: 100% !important;
+  overflow: auto !important;
+}
+table {
+  width: 100%; /* Ширина таблицы */
+  border-collapse: collapse; /* Отображать только одинарные линии */
+}
+th {
+  text-align: left; /* Выравнивание по левому краю */
+  background: #ccc; /* Цвет фона ячеек */
+  padding: 5px !important; /* Поля вокруг содержимого ячеек */
+  border: 1px solid black; /* Граница вокруг ячеек */
+
+}
+td {
+  padding: 5px !important; /* Поля вокруг содержимого ячеек */
+  border: 1px solid black; /* Граница вокруг ячеек */
 }

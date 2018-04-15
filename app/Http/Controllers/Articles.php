@@ -25,14 +25,21 @@ class Articles extends Controller
     public function Show($id)
     {
         $categories = Category::all();
-        $article = Article::where('id', $id);;
+        $article = Article::where('id', $id);
 
-        if ($article === null)
+
+        if (!$article)
         {
             abort(404);
         }
+        $article = $article->get();
+        $re1 = "<div class='table-responsive'><table";
+        $result = str_replace($re1, "<table", $article[0]->body);
+        $re2= '</table></div>';
+        $result = str_replace($re2, "</table>", $result );
+        $article[0]->body = $result;
         $cat = Article::find($id)->Category;
-        return view('Articles.edit', ['categories' => $categories, 'article' => $article->get(), 'cat' => $cat]);
+        return view('Articles.edit', ['categories' => $categories, 'article' => $article, 'cat' => $cat]);
     }
 
     public function AddShow()
@@ -45,9 +52,14 @@ class Articles extends Controller
     {
 
         $article = new Article();
+        $re1 = '<table';
+        $result = str_replace($re1, "<div class='table-responsive'><table", $request->input('body') );
+        $re2= '</table>';
+        $result = str_replace($re2, "</table></div>", $result );
+        $article->body = $result;
         $article->title = $request->input('title');
         $article->short = $request->input('short');
-        $article->body = $request->input('body');
+        //$article->body = $request->input('body');
         $article->category_id = $request->input('category_id');
         $path = $request->file('article_image')->store('uploads');
         $article->image_url = $path;
@@ -69,9 +81,14 @@ class Articles extends Controller
 
         if ($article !== null)
         {
+            $re1 = '<table';
+            $result = str_replace($re1, "<div class='table-responsive'><table", $request->input('body') );
+            $re2= '</table>';
+            $result = str_replace($re2, "</table></div>", $result );
+            $article->body = $result;
             $article->title = $request->input('title');
             $article->short = $request->input('short');
-            $article->body = $request->input('body');
+           // $article->body = $request->input('body');
             $article->category_id = $request->input('category_id');
             if ($request->file('article_image') !== null)
             {
