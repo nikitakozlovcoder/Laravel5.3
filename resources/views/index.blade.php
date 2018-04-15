@@ -90,7 +90,7 @@
             <div class="wrap">
             <div class="products">
                 <h1>Наша продукция</h1>
-                <div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci dicta est eveniet ipsam possimus quasi quibusdam, quos recusandae sed tenetur ullam.</div>
+                <div class="text"></div>
                 <div class="products_columns">
                     @foreach($articles as $article)
 
@@ -121,7 +121,7 @@
 
                     <div class="info_col_img info_col">
                         <div class="info_col_img_wrap">
-                            <img src="./img/970x970/01.jpg" alt="">
+                            <img src="./img/970x970/1.jpg" alt="">
                         </div>
                     </div>
                 </div>
